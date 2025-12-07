@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Chris Carter: Robert Hunter thriller sorozat rajongói oldala, könyvek, karakterek, írói életrajz.">
+    <meta name="author" content="Barkóczay Anna">
+    <title>Kérdőív</title>
+    <link rel="icon" href="kepek/favicon.ico">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="cim">
+        <h1>Kérdőív</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="interaktiv.html">Könyvek</a></li>
+            <li><a href="karakterek.html">Karakter ismertető</a></li>
+            <li><a href="szerzo.html">A szerzőről</a></li>
+            <li><a href="urlap.html">Kérdőív</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="container">
+            <h1>Kérdőív</h1>
+            <p class="info">Töltse ki kérdőívünket és segítse munkánkat, hogy továbbra is a legérdekesebb információkat közvetíthessük a ranjongóknak!</p>
+            <form id="fullForm" method="POST">
+                <div class="form-group">
+                    <label for="fullname">Teljes név:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Pl. Robert Hunter">
+                    <div id="error-name" class="error-msg"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email cím:</label>
+                    <input type="email" id="email" name="email" placeholder="pelda@mail.com">
+                    <div id="error-email" class="error-msg"></div>
+                </div>
+                <div style="display: flex; gap: 15px;">
+                    <div class="form-group" style="flex: 1;">
+                        <label for="age">Életkor:</label>
+                        <input type="number" id="age" name="age" min="1">
+                        <div id="error-age" class="error-msg"></div>
+                    </div>
+                </div>
+                <div class="form-group radio-group">
+                    <label style="display:block; margin-bottom:10px;">Nem:</label>
+                    <input type="radio" id="female" name="gender" value="no" checked>
+                    <label for="female">Nő</label>
+                    
+                    <input type="radio" id="male" name="gender" value="ferfi">
+                    <label for="male">Férfi</label>
+
+                    <input type="radio" id="other" name="gender" value="egyeb">
+                    <label for="other">Egyéb</label>
+                </div>
+                <div class="form-group">
+                    <label for="kedvenc">Kedvenc könyv:</label>
+                    <select id="kedvenc" name="kedvenc_konyv">
+                        <option value="">-- Válassz egyet --</option>
+                        <option value="nyomozo">A Nyomozó</option>
+                        <option value="kersztes-gyilkos">A keresztes gyilkos</option>
+                        <option value="kivegzes">Kivégzés</option>
+                        <option value="vadasz">Vadász</option>
+                        <option value="halal-szobrasza">A Halál Szobrásza</option>
+                        <option value="halallista">Halállista</option>
+                        <option value="gonosz-elme">Egy gonosz elme</option>
+                        <option value="nevem-halal">A nevem: Halál</option>
+                        <option value="hivas">A hívás</option>
+                        <option value="holtak-csarnoka">A holtak csarnoka</option>
+                        <option value="gonosz-nyomaban">A gonosz nyomában</option>
+                        <option value="verrel-irva">Vérrel írva</option>
+                        <option value="felelem">Félelem</option>
+                    </select>
+                    <div id="error-kedvenc" class="error-msg"></div>
+                </div>
+                <div class="form-group">
+                    <label for="bio">Mit szeretnék még látni az oldalon:</label>
+                    <textarea id="bio" name="bio" rows="4" placeholder="Tanácsok/kívánságok az oldal fejlesztéséhez..."></textarea>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms_accepted">
+                    <label for="terms">Elfogadom az Adatvédelmi Nyilatkozatot</label>
+                    <div id="error-terms" class="error-msg"></div>
+                </div>
+
+                <button type="submit">Kérdőív Küldése</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>2025 - Robert Hunter rajongói oldal. Minden jog fenntartva.</p>
+    </footer>
+    <script src="JavaScript/script.js"></script>
+</body>
+</html>
